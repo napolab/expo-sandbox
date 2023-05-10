@@ -2,22 +2,47 @@
   "name": "expo-sandbox",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
+  "private": true,
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "lint": "npm-run-all -p lint:*",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier --check .",
+    "fmt": "npm-run-all -s fmt:*",
+    "fmt:eslint": "eslint --fix .",
+    "fmt:prettier": "prettier --write .",
+    "type-check": "tsc --noEmit",
+    "test": "vitest"
   },
   "dependencies": {
-    "expo": "~48.0.15",
     "expo-status-bar": "~1.4.4",
-    "react": "18.2.0",
-    "react-native": "0.71.7"
+    "react": "^18.2.0",
+    "react-native": "^0.71.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0",
+    "@babel/core": "^7.21.8",
+    "@naporin0624/eslint-config": "^0.11.0",
+    "@testing-library/react-native": "12.0.0-rc.0",
     "@types/react": "~18.0.14",
-    "typescript": "^4.9.4"
+    "@types/react-native": "^0.69.20",
+    "@vitejs/plugin-react": "^4.0.0",
+    "babel-plugin-module-resolver": "^5.0.0",
+    "eslint": "^8.40.0",
+    "eslint-plugin-unicorn": "^47.0.0",
+    "expo": "^48.0.16",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.8",
+    "typescript": "^4.9.4",
+    "vite-tsconfig-paths": "^4.2.0",
+    "vitest": "^0.31.0",
+    "vitest-react-native": "^0.0.5"
   },
-  "private": true
+  "overrides": {
+    "tsconfig-paths": "^4.0.0",
+    "json5": "2.2.2",
+    "xml2js": "0.5.0"
+  }
 }
