@@ -1,6 +1,6 @@
 /** @type {import('@babel/core').ConfigFunction} */
 module.exports = (api) => {
-  api.cache(true);
+  api.cache(true)
 
   return {
     presets: ['babel-preset-expo'],
@@ -9,13 +9,13 @@ module.exports = (api) => {
         'module-resolver',
         {
           alias: {
-            components: './src/components',
-            utils: './src/utils',
-            hooks: './src/hooks',
-            screens: './src/screens',
+            '@components': './src/components',
+            '@utils': './src/utils',
+            '@hooks': './src/hooks',
+            '@screens': './src/screens',
           },
         },
       ],
     ],
-  };
-};
+  }
+}
