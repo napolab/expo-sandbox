@@ -11,5 +11,5 @@
       "@screens/*": ["src/screens/*"]
     }
   },
-  "include": ["App.tsx", "src", "types"]
+  "include": ["App.tsx", "src", "types", "app"]
 }
