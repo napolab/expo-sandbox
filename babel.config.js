@@ -12,11 +12,12 @@ module.exports = (api) => {
             '@components': './src/components',
             '@utils': './src/utils',
             '@hooks': './src/hooks',
-            '@screens': './src/screens',
+            '@logic': './src/logic',
+            '@theme': './src/theme',
           },
         },
       ],
-      require.resolve("expo-router/babel")
+      require.resolve('expo-router/babel'),
     ],
   }
 }
