@@ -12,7 +12,7 @@ const Layout: FC = () => {
     [theme.font.NotoSansJP[400]]: NotoSansJPRegular,
   })
 
-  if (!fontLoaded ) return <SplashScreen />
+  if (!fontLoaded) return <SplashScreen />
 
   return (
     <Provider>

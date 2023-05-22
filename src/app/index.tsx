@@ -19,16 +19,16 @@ const resource = merge(
 ).pipe(
   concatMap((value) => {
     if (value instanceof Error) return throwError(() => value)
-    if(typeof value !== "number") return of(0)
+    if (typeof value !== 'number') return of(0)
 
     return of(value)
   }),
 )
-const timer = datasource(() => resource);
+const timer = datasource(() => resource)
 
 const Presenter: FC = () => {
   const error = useCallback(() => {
-    any.next(new Error("error dayooo"));
+    any.next(new Error('error dayooo'))
   }, [])
 
   return (
@@ -39,7 +39,7 @@ const Presenter: FC = () => {
       </Link>
       <Text style={{ fontFamily: theme.font.NotoSansJP[400] }}>こんばんは</Text>
       <Text>こんばんは</Text>
-      <Button title='error' onPress={error} />
+      <Button title="error" onPress={error} />
       <Component />
     </View>
   )
