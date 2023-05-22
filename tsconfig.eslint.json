@@ -1,4 +1,13 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["App.tsx", "src", "types", ".eslintrc.cjs", "vitest.config.ts", "babel.config.js"]
+  "include": [
+    "src",
+    "types",
+    ".eslintrc.cjs",
+    "vitest.config.ts",
+    "babel.config.js",
+    "index.js",
+    "app",
+    "metro.config.js"
+  ]
 }

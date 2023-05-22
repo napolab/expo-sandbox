@@ -8,6 +8,7 @@ const config = {
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
     'no-restricted-imports': ['error', { patterns: ['src/'] }],
+    camelcase: ['error', { ignoreImports: true }],
     'import/no-extraneous-dependencies': [
       'error',
       {
@@ -30,6 +31,12 @@ const config = {
       files: ['src/**/*.ts', 'src/**/*.tsx'],
       rules: {
         'unicorn/filename-case': ['error', { case: 'kebabCase' }],
+      },
+    },
+    {
+      files: ['*.config.js'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
       },
     },
   ],
